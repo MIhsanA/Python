@@ -32,7 +32,16 @@ def near(word1,word2):
     else:
         print(False)
 
- 
+near("dragoon", "dragon")      
 
-
-near("dragoon", "dragon")        
+def near2(word1, word2):
+    i = 0 
+    while i < len(word1):
+        tmp_list = list(word1)
+        del tmp_list[i]
+        if "".join(tmp_list) == word2:
+            return True
+            break
+        else:
+            i=i+1
+    return False  
